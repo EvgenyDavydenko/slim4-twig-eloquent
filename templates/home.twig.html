@@ -1,6 +1,11 @@
 {% extends 'layout.twig.html' %}
 
 {% block body %}
-<h1>Hello from twig</h1>
+<h1>Список имен пользователей</h1>
+<ul>
+    {% for user in users %}
+        <li>Name: {{ user.name|e }}</li>
+    {% endfor %}
+</ul>
 <a href="/about">About</a>
 {% endblock %}
